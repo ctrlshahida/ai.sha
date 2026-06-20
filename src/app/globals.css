@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* Plus Jakarta Sans */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/fonts/PlusJakartaSans/PlusJakartaSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/fonts/PlusJakartaSans/PlusJakartaSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/fonts/PlusJakartaSans/PlusJakartaSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/fonts/PlusJakartaSans/PlusJakartaSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/fonts/PlusJakartaSans/PlusJakartaSans-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-display: swap;
+}
+
+@theme {
+  /* Greens */
+  --color-forest:       #071614;
+  --color-forest-light: #0D2018;
+  --color-forest-dark:  #040E0C;
+
+  /* Teal - CTA buttons only */
+  --color-teal:         #3A8A74;
+  --color-teal-light:   #4AA890;
+  --color-teal-dark:    #286858;
+
+  /* Gold - primary accent */
+  --color-amber:        #C8931A;
+  --color-amber-light:  #E0AE3A;
+  --color-amber-dark:   #9E7210;
+
+  /* Coral - errors only */
+  --color-coral:        #E05545;
+  --color-coral-light:  #F07060;
+  --color-coral-dark:   #B83530;
+
+  /* Text */
+  --color-cream:        #E8F0EF;
+  --color-cream-dark:   #6B9E9A;
+
+  /* Legacy aliases */
+  --color-gold:         #C8931A;
+  --color-gold-light:   #E0AE3A;
+  --color-gold-dark:    #9E7210;
+
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+  --font-poppins-stack: var(--font-poppins), 'Poppins', sans-serif;
+  --font-amiri:   var(--font-amiri-var);
+}
+
+html {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background: linear-gradient(160deg, #0A2820 0%, #071614 45%, #051210 100%);
+  color: #E8F0EF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.arabic-text {
+  font-family: var(--font-amiri-var), 'Amiri', serif;
+  direction: rtl;
+  text-align: right;
+  line-height: 2;
+}
+
+.glass {
+  background: rgba(13, 32, 24, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(200, 147, 26, 0.12);
+}

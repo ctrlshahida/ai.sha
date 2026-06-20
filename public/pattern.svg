@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80">
+  <g fill="none" stroke="#C8931A" stroke-width="0.7" opacity="0.09">
+    <!-- Diamond (rotated square) -->
+    <polygon points="40,4 76,40 40,76 4,40"/>
+    <!-- Upright square -->
+    <rect x="16" y="16" width="48" height="48"/>
+    <!-- Spokes connecting diamond tips to square corners -->
+    <line x1="40" y1="4"  x2="16" y2="16"/>
+    <line x1="40" y1="4"  x2="64" y2="16"/>
+    <line x1="76" y1="40" x2="64" y2="16"/>
+    <line x1="76" y1="40" x2="64" y2="64"/>
+    <line x1="40" y1="76" x2="64" y2="64"/>
+    <line x1="40" y1="76" x2="16" y2="64"/>
+    <line x1="4"  y1="40" x2="16" y2="64"/>
+    <line x1="4"  y1="40" x2="16" y2="16"/>
+  </g>
+</svg>
