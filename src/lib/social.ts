@@ -41,16 +41,36 @@ export async function fetchInstagramMeta(url: string): Promise<VideoMeta | null>
       return null;
     }
 
-    const item = data?.data ?? data;
+    console.log('[Instagram] Full raw response:', JSON.stringify(data).slice(0, 2000));
+
+    const item = data?.data ?? data?.result ?? data?.media ?? data;
     if (!item) {
       console.error('[Instagram] No data in response', JSON.stringify(data));
       return null;
     }
 
-    console.log('[Instagram] Response keys:', Object.keys(item));
+    console.log('[Instagram] Item keys:', Object.keys(item));
 
-    const caption = item.caption_text ?? item.caption?.text ?? item.edge_media_to_caption?.edges?.[0]?.node?.text ?? '';
-    const author = item.owner?.username ?? item.owner?.full_name ?? item.user?.username ?? '';
+    const caption =
+      item.caption_text ??
+      item.caption?.text ??
+      item.caption ??
+      item.edge_media_to_caption?.edges?.[0]?.node?.text ??
+      item.desc ??
+      item.description ??
+      item.title ??
+      '';
+
+    const author =
+      item.owner?.username ??
+      item.owner?.full_name ??
+      item.user?.username ??
+      item.user?.full_name ??
+      item.username ??
+      item.author ??
+      '';
+
+    console.log('[Instagram] Parsed caption:', caption.slice(0, 100), '| author:', author);
 
     return {
       title: caption.slice(0, 200),
