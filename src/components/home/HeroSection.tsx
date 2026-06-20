@@ -33,7 +33,7 @@ const STEPS = [
 
 export default function HeroSection() {
   return (
-    <div className="relative flex flex-col items-center text-center px-4 pt-16 pb-10 overflow-hidden">
+    <div className="relative flex flex-col items-center text-center px-4 pt-8 sm:pt-16 pb-6 sm:pb-10 overflow-hidden">
 
       <div
         className="pointer-events-none absolute -left-32 top-0 w-[480px] h-[480px] opacity-20 blur-3xl"
@@ -45,13 +45,13 @@ export default function HeroSection() {
       />
 
       <p
-        className="arabic-text text-4xl sm:text-5xl text-amber mb-6 select-none"
+        className="arabic-text text-4xl sm:text-5xl text-amber mb-4 sm:mb-6 select-none"
         style={{ textShadow: '0 0 32px rgba(200,147,26,0.4)' }}
       >
         ٱلْحَقُّ
       </p>
 
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-4">
+      <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-3 sm:mb-4">
         <span className="text-cream">Hi, I&apos;m </span>
         <span
           style={{
@@ -67,14 +67,14 @@ export default function HeroSection() {
       </h1>
 
       {/* Subtitle */}
-      <p className="text-cream-dark text-sm sm:text-small leading-relaxed max-w-md mx-auto mb-8" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+      <p className="text-cream-dark text-sm sm:text-small leading-relaxed max-w-md mx-auto mb-5 sm:mb-8" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
         Paste a social media link or describe a claim - I&apos;ll
         check it against the Quran, authentic Sunnah, and the
         four schools of thought.
       </p>
 
-      {/* Workflow */}
-      <div className="flex flex-col sm:flex-row items-start justify-center gap-0 w-full max-w-2xl mx-auto">
+      {/* Workflow — 2×2 grid on mobile, single row with arrows on sm+ */}
+      <div className="grid grid-cols-2 gap-x-2 gap-y-5 sm:flex sm:flex-row sm:gap-0 items-start justify-center w-full max-w-2xl mx-auto">
         {STEPS.map((step, i) => {
           const Icon = step.icon;
           const isLast = i === STEPS.length - 1;
@@ -91,18 +91,12 @@ export default function HeroSection() {
                 </p>
               </div>
 
-              {/* Connector */}
+              {/* Horizontal connector — desktop only */}
               {!isLast && (
-                <>
-                  <svg className="hidden sm:block shrink-0 mt-[-18px]" width="28" height="12" viewBox="0 0 28 12" fill="none">
-                    <line x1="0" y1="6" x2="20" y2="6" stroke="rgba(200,147,26,0.3)" strokeWidth="1.5" strokeDasharray="3 3" />
-                    <polyline points="16,2 22,6 16,10" stroke="rgba(200,147,26,0.4)" strokeWidth="1.5" fill="none" strokeLinejoin="round" strokeLinecap="round" />
-                  </svg>
-                  <svg className="block sm:hidden my-1" width="12" height="24" viewBox="0 0 12 24" fill="none">
-                    <line x1="6" y1="0" x2="6" y2="18" stroke="rgba(200,147,26,0.3)" strokeWidth="1.5" strokeDasharray="3 3" />
-                    <polyline points="2,14 6,20 10,14" stroke="rgba(200,147,26,0.4)" strokeWidth="1.5" fill="none" strokeLinejoin="round" strokeLinecap="round" />
-                  </svg>
-                </>
+                <svg className="hidden sm:block shrink-0 mt-[-18px]" width="28" height="12" viewBox="0 0 28 12" fill="none">
+                  <line x1="0" y1="6" x2="20" y2="6" stroke="rgba(200,147,26,0.3)" strokeWidth="1.5" strokeDasharray="3 3" />
+                  <polyline points="16,2 22,6 16,10" stroke="rgba(200,147,26,0.4)" strokeWidth="1.5" fill="none" strokeLinejoin="round" strokeLinecap="round" />
+                </svg>
               )}
             </div>
           );

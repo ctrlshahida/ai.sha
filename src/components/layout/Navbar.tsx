@@ -30,25 +30,25 @@ export default function Navbar() {
         <div className="flex items-center gap-1">
           <Link
             href="/"
-            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all ${
+            className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-sm font-semibold transition-all ${
               pathname === '/'
                 ? 'bg-teal-dark/60 text-cream border border-cream/20'
                 : 'text-cream/70 hover:text-cream hover:bg-teal-dark/40'
             }`}
           >
             <Search size={14} />
-            Fact Check
+            <span className="hidden sm:inline">Fact Check</span>
           </Link>
           <Link
             href="/scholars"
-            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all ${
+            className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-sm font-semibold transition-all ${
               pathname === '/scholars'
                 ? 'bg-teal-dark/60 text-cream border border-cream/20'
                 : 'text-cream/70 hover:text-cream hover:bg-teal-dark/40'
             }`}
           >
             <Users size={14} />
-            Scholars
+            <span className="hidden sm:inline">Scholars</span>
           </Link>
         </div>
       </div>

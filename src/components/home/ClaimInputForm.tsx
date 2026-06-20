@@ -52,7 +52,7 @@ export default function ClaimInputForm() {
   const inputIsUrl = isUrl(input);
 
   return (
-    <div className="max-w-2xl mx-auto px-4 space-y-3 pb-16">
+    <div className="max-w-2xl mx-auto px-4 space-y-3 pb-8 sm:pb-16">
 
       {/* Input */}
       <div className="relative glass rounded-2xl">
@@ -64,7 +64,7 @@ export default function ClaimInputForm() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => { if (e.key === 'Enter') submit(input); }}
-          placeholder="Paste a YouTube, Instagram, or TikTok URL, or describe an Islamic claim..."
+          placeholder="Paste a URL or describe an Islamic claim..."
           className="w-full pl-11 pr-4 py-4 bg-transparent text-cream placeholder-cream-dark/50 focus:outline-none text-sm rounded-2xl"
         />
         {inputIsUrl && (
