@@ -70,47 +70,49 @@ async function fetchInstagramMetaFromRapidAPI(url: string): Promise<VideoMeta | 
   const apiKey = process.env.RAPIDAPI_KEY;
   if (!apiKey) return null;
 
-  const shortcodeMatch = url.match(/\/(?:reel|p|tv)\/([A-Za-z0-9_-]+)/);
-  if (!shortcodeMatch) return null;
-  const mediaCode = shortcodeMatch[1];
-
   try {
     const res = await fetch(
-      `https://instagram-scraper-stable-api.p.rapidapi.com/get_media_data_v2.php?media_code=${mediaCode}`,
+      `https://instagram-looter2.p.rapidapi.com/post?url=${encodeURIComponent(url)}`,
       {
         headers: {
           'Content-Type': 'application/json',
-          'x-rapidapi-host': 'instagram-scraper-stable-api.p.rapidapi.com',
+          'x-rapidapi-host': 'instagram-looter2.p.rapidapi.com',
           'x-rapidapi-key': apiKey,
         },
       }
     );
 
     const data = await res.json();
+    console.log('[Instagram Looter2] Raw:', JSON.stringify(data).slice(0, 1000));
 
-    if (!res.ok || data?.error) {
-      console.error('[Instagram RapidAPI] Error:', JSON.stringify(data).slice(0, 200));
+    if (!res.ok || data?.error || data?.detail) {
+      console.error('[Instagram Looter2] Error:', JSON.stringify(data).slice(0, 200));
       return null;
     }
 
-    const item = data?.data ?? data?.result ?? data?.media ?? data;
-    if (!item) return null;
+    // Handle multiple possible response shapes
+    const media =
+      data?.graphql?.shortcode_media ??
+      data?.items?.[0] ??
+      data?.data ??
+      data?.result ??
+      data;
 
     const caption =
-      item.caption_text ??
-      item.caption?.text ??
-      item.caption ??
-      item.edge_media_to_caption?.edges?.[0]?.node?.text ??
-      item.desc ??
-      item.description ??
+      media?.edge_media_to_caption?.edges?.[0]?.node?.text ??
+      media?.caption?.text ??
+      media?.caption_text ??
+      media?.caption ??
       '';
 
     const author =
-      item.owner?.username ??
-      item.owner?.full_name ??
-      item.user?.username ??
-      item.username ??
+      media?.owner?.username ??
+      media?.owner?.full_name ??
+      media?.user?.username ??
+      media?.username ??
       '';
+
+    console.log('[Instagram Looter2] Parsed | author:', author, '| caption:', caption.slice(0, 80));
 
     return {
       title: caption.slice(0, 200),
@@ -119,7 +121,7 @@ async function fetchInstagramMetaFromRapidAPI(url: string): Promise<VideoMeta | 
       platform: 'instagram',
     };
   } catch (err) {
-    console.error('[Instagram RapidAPI] Exception:', err);
+    console.error('[Instagram Looter2] Exception:', err);
     return null;
   }
 }
