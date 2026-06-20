@@ -44,4 +44,4 @@ Islamic content on social media is no exception. Claims about the Quran, the Sun
 
 ## Try It
 
-[**ai.sha.vercel.app**](https://ai.sha.vercel.app)
+[**ai-sha-ai.vercel.app**](https://ai-sha-ai.vercel.app)
