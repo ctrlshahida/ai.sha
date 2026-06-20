@@ -110,8 +110,8 @@ export async function callClaude(
       'content-type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'claude-haiku-4-5',
-      max_tokens: 3500,
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 4096,
       system: SYSTEM_PROMPT,
       messages: [
         {
@@ -131,7 +131,7 @@ export async function callClaude(
   const text = data.content[0].text as string;
 
   const jsonMatch = text.match(/\{[\s\S]*\}/);
-  if (!jsonMatch) throw new Error('Claude did not return valid JSON');
+  if (!jsonMatch) throw new Error(`Claude did not return valid JSON. Response was: ${text.slice(0, 500)}`);
 
   const result = JSON.parse(jsonMatch[0]) as FactCheckResult;
   return result;
