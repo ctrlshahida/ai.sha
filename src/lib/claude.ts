@@ -66,7 +66,7 @@ export function buildUserMessage(
   isUrl: boolean,
   videoMeta?: VideoMeta | null
 ): string {
-  if (isUrl && videoMeta && videoMeta.platform !== 'unknown') {
+  if (isUrl && videoMeta && videoMeta.platform !== 'unknown' && (videoMeta.title || videoMeta.description)) {
     const platformLabel =
       videoMeta.platform === 'youtube' ? 'YouTube video'
       : videoMeta.platform === 'instagram' ? 'Instagram Reel'
