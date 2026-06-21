@@ -33,15 +33,15 @@
 }
 
 @theme {
-  /* Greens */
-  --color-forest:       #071614;
-  --color-forest-light: #0D2018;
-  --color-forest-dark:  #040E0C;
+  /* Greens — lifted to genuine dark teal */
+  --color-forest:       #0D2E26;
+  --color-forest-light: #1A3D32;
+  --color-forest-dark:  #091F1A;
 
-  /* Teal - CTA buttons only */
-  --color-teal:         #3A8A74;
-  --color-teal-light:   #4AA890;
-  --color-teal-dark:    #286858;
+  /* Teal - CTA buttons & navbar */
+  --color-teal:         #2E8A72;
+  --color-teal-light:   #3DAA8C;
+  --color-teal-dark:    #1E6654;
 
   /* Gold - primary accent */
   --color-amber:        #C8931A;
@@ -54,8 +54,8 @@
   --color-coral-dark:   #B83530;
 
   /* Text */
-  --color-cream:        #E8F0EF;
-  --color-cream-dark:   #6B9E9A;
+  --color-cream:        #EEF5F4;
+  --color-cream-dark:   #7BB5B0;
 
   /* Legacy aliases */
   --color-gold:         #C8931A;
@@ -72,8 +72,8 @@ html {
 }
 
 body {
-  background: linear-gradient(160deg, #0A2820 0%, #071614 45%, #051210 100%);
-  color: #E8F0EF;
+  background: #0D2E26;
+  color: #EEF5F4;
   font-family: 'Plus Jakarta Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
@@ -87,8 +87,8 @@ body {
 }
 
 .glass {
-  background: rgba(13, 32, 24, 0.7);
+  background: rgba(26, 61, 50, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(200, 147, 26, 0.12);
+  border: 1px solid rgba(200, 147, 26, 0.18);
 }
