@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Search, Users } from 'lucide-react';
+import { Search, Users, Star } from 'lucide-react';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -49,6 +49,17 @@ export default function Navbar() {
           >
             <Users size={14} />
             <span className="hidden sm:inline">Scholars</span>
+          </Link>
+          <Link
+            href="/creators"
+            className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-sm font-semibold transition-all ${
+              pathname === '/creators'
+                ? 'bg-teal-dark/60 text-cream border border-cream/20'
+                : 'text-cream/70 hover:text-cream hover:bg-teal-dark/40'
+            }`}
+          >
+            <Star size={14} />
+            <span className="hidden sm:inline">Creators</span>
           </Link>
         </div>
       </div>

@@ -68,9 +68,9 @@ export default function HeroSection() {
 
       {/* Subtitle */}
       <p className="text-cream-dark text-sm sm:text-small leading-relaxed max-w-md mx-auto mb-5 sm:mb-8" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-        Paste a social media link or describe a claim - I&apos;ll
-        check it against the Quran, authentic Sunnah, and the
-        four schools of thought.
+        Paste a YouTube, TikTok, or Instagram link from any content creator —
+        or type a claim directly. I&apos;ll verify it against the Quran,
+        authentic Sunnah, and the four schools of thought.
       </p>
 
       {/* Workflow — 2×2 grid on mobile, single row with arrows on sm+ */}

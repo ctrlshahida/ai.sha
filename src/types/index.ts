@@ -67,3 +67,19 @@ export interface Scholar {
   youtubeChannel?: string;
   notableWork?: string;
 }
+
+export type Platform = 'YouTube' | 'Instagram' | 'TikTok' | 'Podcast';
+
+export interface ContentCreator {
+  name: string;
+  handle: string;
+  platforms: Platform[];
+  focus: string;
+  photo?: string;
+  youtubeChannel?: string;
+  instagram?: string;
+  tiktok?: string;
+  website?: string;
+  verifiedCount: number; // number of times flagged as reputable by the fact-checker
+  description: string;
+}
