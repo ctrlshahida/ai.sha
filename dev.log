@@ -1,0 +1,17 @@
+
+> aisha@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.26.219.58:3000
+✓ Ready in 532ms
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+
+ GET /api/trending 200 in 468ms (next.js: 445ms, application-code: 23ms)
+ GET /api/trending 200 in 10ms (next.js: 4ms, application-code: 6ms)
+ GET /api/trending 200 in 9ms (next.js: 5ms, application-code: 4ms)

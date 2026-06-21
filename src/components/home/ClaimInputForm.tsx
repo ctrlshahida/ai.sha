@@ -102,7 +102,7 @@ export default function ClaimInputForm() {
             <button
               key={text}
               onClick={() => { setInput(text); submit(text); }}
-              className="flex items-start gap-3 px-4 py-3 rounded-xl border border-amber/15 bg-forest-light/60 text-left hover:border-amber/40 hover:bg-forest-light transition-all group"
+              className="flex items-start gap-3 px-4 py-3 rounded-xl text-left card hover:border-white/15 hover:brightness-110 transition-all group"
             >
               <Icon size={15} className="text-amber/60 group-hover:text-amber mt-0.5 shrink-0 transition-colors" />
               <span className="text-xs text-cream/70 group-hover:text-cream leading-snug transition-colors">{text}</span>

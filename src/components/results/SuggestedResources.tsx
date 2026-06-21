@@ -5,10 +5,10 @@ const TYPE_CONFIG: Record<
   SuggestedResource['type'],
   { label: string; Icon: React.ElementType; color: string; bg: string }
 > = {
-  book:    { label: 'Book',    Icon: BookOpen,    color: 'text-amber',      bg: 'bg-amber/10 border-amber/25' },
-  scholar: { label: 'Scholar', Icon: User,        color: 'text-teal',       bg: 'bg-teal/10 border-teal/25' },
-  website: { label: 'Website', Icon: Globe,       color: 'text-cream-dark', bg: 'bg-cream/5 border-cream/10' },
-  lecture: { label: 'Lecture', Icon: PlayCircle,  color: 'text-coral-light', bg: 'bg-coral/10 border-coral/20' },
+  book:    { label: 'Book',    Icon: BookOpen,    color: 'text-amber',      bg: 'bg-white border-gray-100 shadow-sm' },
+  scholar: { label: 'Scholar', Icon: User,        color: 'text-teal',       bg: 'bg-white border-gray-100 shadow-sm' },
+  website: { label: 'Website', Icon: Globe,       color: 'text-teal',       bg: 'bg-white border-gray-100 shadow-sm' },
+  lecture: { label: 'Lecture', Icon: PlayCircle,  color: 'text-coral-light', bg: 'bg-white border-gray-100 shadow-sm' },
 };
 
 export default function SuggestedResources({ resources }: { resources: SuggestedResource[] }) {
@@ -36,15 +36,15 @@ export default function SuggestedResources({ resources }: { resources: Suggested
               </div>
 
               {/* Title */}
-              <p className="text-cream font-semibold text-sm leading-snug">{r.title}</p>
+              <p className="text-gray-900 font-semibold text-sm leading-snug">{r.title}</p>
 
               {/* Author */}
               {r.author && (
-                <p className="text-cream-dark text-xs">{r.author}</p>
+                <p className="text-gray-500 text-xs">{r.author}</p>
               )}
 
               {/* Description */}
-              <p className="text-cream/60 text-xs leading-relaxed mt-auto">{r.description}</p>
+              <p className="text-gray-500 text-xs leading-relaxed mt-auto">{r.description}</p>
             </div>
           );
 

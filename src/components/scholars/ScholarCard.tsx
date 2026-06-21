@@ -9,7 +9,7 @@ export default function ScholarCard({ scholar }: { scholar: Scholar }) {
   const showPhoto = !!scholar.photo && !imgError;
 
   return (
-    <div className="border border-gold/20 rounded-2xl p-5 bg-forest-light hover:border-gold/50 hover:bg-forest-light/80 transition-all">
+    <div className="rounded-2xl p-5 card hover:border-white/15 hover:brightness-110 transition-all">
       <div className="flex items-start gap-3 mb-3">
         <div className="w-16 h-16 rounded-full shrink-0 overflow-hidden border-2 border-gold/30">
           {showPhoto ? (

@@ -58,7 +58,7 @@ export default function ResultPage() {
 
       {/* Caveats */}
       {result.importantCaveats.length > 0 && (
-        <section className="glass rounded-2xl p-5 space-y-3">
+        <section className="card rounded-2xl p-5 space-y-3">
           <h2 className="text-sm font-bold text-amber uppercase tracking-widest flex items-center gap-2">
             <AlertTriangle size={14} /> Important Caveats
           </h2>

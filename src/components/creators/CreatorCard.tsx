@@ -29,7 +29,7 @@ export default function CreatorCard({ creator }: { creator: ContentCreator }) {
   const showPhoto = !!creator.photo && !imgError;
 
   return (
-    <div className="border border-gold/20 rounded-2xl p-5 bg-forest-light hover:border-gold/50 hover:bg-forest-light/80 transition-all flex flex-col gap-3">
+    <div className="rounded-2xl p-5 card hover:border-white/15 hover:brightness-110 transition-all flex flex-col gap-3">
       {/* Header */}
       <div className="flex items-start gap-3">
         <div className="w-14 h-14 rounded-full shrink-0 overflow-hidden border-2 border-gold/30">

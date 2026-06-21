@@ -39,7 +39,7 @@ export default function ScholarsPage() {
               href={site.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-gold/20 rounded-2xl p-5 bg-forest-light hover:border-gold/50 transition-all group"
+              className="rounded-2xl p-5 card hover:border-white/15 hover:brightness-110 transition-all group"
             >
               <div className="flex items-center justify-between mb-2">
                 <h3 className="font-bold text-cream">{site.name}</h3>

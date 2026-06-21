@@ -27,7 +27,7 @@ export default async function TrendingSection() {
         {trending.map((item, i) => (
           <div
             key={i}
-            className="flex items-center justify-between gap-3 px-3 py-2.5 bg-forest-light border border-gold/15 rounded-xl"
+            className="flex items-center justify-between gap-3 px-3 py-2.5 card rounded-xl"
           >
             <p className="text-sm text-cream/70 truncate flex-1">{item.claim}</p>
             <VerdictBadge verdict={item.verdict} size="sm" />
