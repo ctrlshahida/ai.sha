@@ -1,5 +1,5 @@
 import { HadithReference } from '@/types';
-import { ExternalLink, ShieldCheck } from 'lucide-react';
+import { ExternalLink, ScrollText, ShieldCheck } from 'lucide-react';
 
 const GRADE_STYLE: Record<string, string> = {
   Sahih: 'bg-teal/10 text-teal border border-teal/25',
@@ -14,7 +14,7 @@ export default function HadithEvidence({ hadiths }: { hadiths: HadithReference[]
   return (
     <section>
       <h2 className="text-lg font-bold text-cream mb-3 flex items-center gap-2">
-        <span className="text-amber">☪</span> Hadith Evidence
+        <ScrollText size={18} className="text-amber" /> Hadith Evidence
       </h2>
       <div className="space-y-3">
         {hadiths.map((h, i) => (

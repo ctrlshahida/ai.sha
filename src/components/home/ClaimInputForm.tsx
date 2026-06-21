@@ -47,7 +47,7 @@ export default function ClaimInputForm() {
     }
   }, [router]);
 
-  if (loading) return <LoadingSpinner message="Consulting Islamic sources…" />;
+  if (loading) return <LoadingSpinner />;
 
   const inputIsUrl = isUrl(input);
 

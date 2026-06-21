@@ -42,6 +42,14 @@ Islamic content on social media is no exception. Claims about the Quran, the Sun
 
 ---
 
+## Further Reading
+
+The app includes a **Scholars** page — a curated directory of classical and contemporary Islamic scholars, organised by school of thought, with brief biographies and areas of specialisation. It is designed as a starting point for users who want to go beyond a single fact-check and engage more deeply with the tradition.
+
+→ [ai-sha-ai.vercel.app/scholars](https://ai-sha-ai.vercel.app/scholars)
+
+---
+
 ## Try It
 
 [**ai-sha-ai.vercel.app**](https://ai-sha-ai.vercel.app)
