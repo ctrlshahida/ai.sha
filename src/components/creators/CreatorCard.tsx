@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { ContentCreator, Platform } from '@/types';
-import { ExternalLink, PlayCircle, Instagram, Mic, CheckCircle2 } from 'lucide-react';
+import { ExternalLink, PlayCircle, Link2, Mic, CheckCircle2 } from 'lucide-react';
 
 const PLATFORM_COLORS: Record<Platform, string> = {
   YouTube: 'bg-rose-600/80 hover:bg-rose-600 text-white',
@@ -17,7 +17,7 @@ function PlatformBadge({ platform }: { platform: Platform }) {
       className={`inline-flex items-center gap-1 text-xs font-medium px-2.5 py-0.5 rounded-full ${PLATFORM_COLORS[platform]}`}
     >
       {platform === 'YouTube' && <PlayCircle size={10} />}
-      {platform === 'Instagram' && <Instagram size={10} />}
+      {platform === 'Instagram' && <Link2 size={10} />}
       {platform === 'Podcast' && <Mic size={10} />}
       {platform}
     </span>
@@ -90,7 +90,7 @@ export default function CreatorCard({ creator }: { creator: ContentCreator }) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-xs font-medium bg-purple-600/80 hover:bg-purple-600 text-white px-3 py-1.5 rounded-full transition-colors"
           >
-            <Instagram size={11} /> Instagram
+            <Link2 size={11} /> Instagram
           </a>
         )}
         {creator.website && (
